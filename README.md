@@ -22,7 +22,7 @@ Follow these steps to get the project running on your local machine.
 ### 2. Clone the Repository
 Open your terminal or command prompt and run:
 ```bash
-git clone https://github.com/javal-gttc/attendanceByIntelligence.git
+git clone https://github.com/AJAYMYTH/attendanceByIntelligence.git
 cd "attendanceByIntelligence"
 ```
 
