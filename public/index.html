@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="manifest" href="manifest.json">
+    <title>ABI | Attendance By Intelligence</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <!-- Login Page -->
+        <div id="login-page" class="page active">
+            <div class="login-container">
+                <div class="brand-identity">
+                    <div class="logo-wrapper">
+                        <img src="logo.png" alt="Logo" class="brand-logo">
+                    </div>
+                    <h1>Welcome Back</h1>
+                    <span class="shimmer-text">Attendance by Intelligence</span>
+                </div>
+
+                <div class="input-field-group">
+                    <input type="text" id="username" placeholder="Username" autocomplete="username">
+                    <input type="password" id="password" placeholder="Password" autocomplete="current-password">
+                    <input type="text" id="uid" placeholder="UID (G2TC-AS-XXXX-A/S)">
+                </div>
+
+                <button onclick="handleLogin()">Sign In</button>
+                <div id="login-error" class="error-msg"></div>
+            </div>
+        </div>
+
+        <!-- Dashboard Container -->
+        <div id="dashboard" class="page">
+            <!-- Desktop Sidebar -->
+            <nav class="desktop-sidebar">
+                <div class="sidebar-brand">
+                    <img src="logo.png" alt="Logo" class="logo-sidebar">
+                    <div class="brand-text">
+                        <span class="brand-name">ABI</span>
+                        <span class="brand-desc">Attendance By Intelligence</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-menu">
+                    <div class="sidebar-link active" onclick="showTab('attendance')">
+                        <span class="material-symbols-rounded">check_circle</span>
+                        <span>Attendance</span>
+                    </div>
+                    <div class="sidebar-link" onclick="showTab('students')">
+                        <span class="material-symbols-rounded">group</span>
+                        <span>Students</span>
+                    </div>
+                    <div class="sidebar-link" onclick="showTab('analytics')">
+                        <span class="material-symbols-rounded">analytics</span>
+                        <span>Analytics</span>
+                    </div>
+                    <div class="sidebar-link" onclick="showTab('admin')">
+                        <span class="material-symbols-rounded">settings</span>
+                        <span>Admin</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-footer">
+                    <button onclick="handleLogout()" class="logout-sidebar-btn">
+                        <span class="material-symbols-rounded">logout</span>
+                        <span>Sign Out</span>
+                    </button>
+                </div>
+            </nav>
+
+            <div class="main-wrapper">
+                <!-- Mobile Header -->
+                <header class="mobile-header">
+                    <img src="logo.png" alt="Logo" class="logo-mini">
+                    <button onclick="handleLogout()" class="logout-icon-btn">
+                        <span class="material-symbols-rounded">logout</span>
+                    </button>
+                </header>
+
+                <main id="tab-content">
+                    <!-- Content injected here -->
+                </main>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <nav class="bottom-nav">
+                <div class="bottom-nav-link active" onclick="showTab('attendance')">
+                    <span class="material-symbols-rounded">check_circle</span>
+                    <span>Attendance</span>
+                </div>
+                <div class="bottom-nav-link" onclick="showTab('students')">
+                    <span class="material-symbols-rounded">group</span>
+                    <span>Students</span>
+                </div>
+                <div class="bottom-nav-link" onclick="showTab('analytics')">
+                    <span class="material-symbols-rounded">analytics</span>
+                    <span>Analytics</span>
+                </div>
+                <div class="bottom-nav-link" onclick="showTab('admin')">
+                    <span class="material-symbols-rounded">settings</span>
+                    <span>Admin</span>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

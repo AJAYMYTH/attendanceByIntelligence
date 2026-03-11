@@ -1,0 +1,17 @@
+{
+    "name": "Attendance By Intelligence",
+    "short_name": "ABI",
+    "description": "Smart student attendance and analytics system.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff",
+    "icons": [
+        {
+            "src": "logo.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}
